@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>낚시금지구역 안내 — 이지피싱</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+      background: #f8f9fa;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+    .logo {
+      font-size: 28px;
+    }
+    .brand {
+      font-size: 12px;
+      color: #888;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .lead {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+    .updated {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 12px;
+      color: #166534;
+      margin-bottom: 36px;
+    }
+    h2 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 14px;
+      margin-top: 36px;
+    }
+    /* 출처 카드 */
+    .source-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    @media (max-width: 480px) {
+      .source-grid { grid-template-columns: 1fr; }
+    }
+    .source-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 18px 16px;
+    }
+    .source-card .icon { font-size: 22px; margin-bottom: 10px; }
+    .source-card .name { font-size: 14px; font-weight: 700; margin-bottom: 3px; }
+    .source-card .type { font-size: 12px; color: #666; margin-bottom: 10px; }
+    .source-card a {
+      font-size: 12px;
+      color: #2563eb;
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .source-card a:hover { text-decoration: underline; }
+    /* 법령 */
+    .law-box {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-bottom: 8px;
+      font-size: 13px;
+      color: #334155;
+      line-height: 1.8;
+    }
+    .law-box strong { color: #111; }
+    .law-box a { color: #2563eb; text-decoration: none; }
+    .law-box a:hover { text-decoration: underline; }
+    /* 면책 */
+    .disclaimer {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 14px;
+      padding: 20px;
+      margin-top: 36px;
+    }
+    .disclaimer h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #92400e;
+      margin-bottom: 10px;
+    }
+    .disclaimer p {
+      font-size: 13px;
+      color: #78350f;
+      line-height: 1.8;
+    }
+    /* 고시 링크 목록 */
+    .link-list {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .link-item {
+      display: flex;
+      align-items: center;
+      padding: 14px 16px;
+      border-bottom: 1px solid #f3f4f6;
+      gap: 10px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .link-item:last-child { border-bottom: none; }
+    .link-item:hover { background: #f9fafb; }
+    .link-item .li-icon { font-size: 16px; flex-shrink: 0; }
+    .link-item .li-text { flex: 1; }
+    .link-item .li-title { font-size: 13px; font-weight: 600; color: #111; }
+    .link-item .li-url { font-size: 11px; color: #2563eb; margin-top: 1px; word-break: break-all; }
+    .link-item .li-arrow { color: #9ca3af; font-size: 13px; flex-shrink: 0; }
+    /* 푸터 */
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 12px;
+      color: #aaa;
+      text-align: center;
+      line-height: 1.8;
+    }
+    footer a { color: #6b7280; text-decoration: none; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="logo">🎣</div>
+    <div class="brand">이지피싱 공식 안내</div>
+  </div>
+  <h1>낚시금지구역 안내</h1>
+  <p class="lead">
+    이지피싱 앱에서 제공하는 낚시금지구역 데이터의 출처와 법적 근거를 안내합니다.<br>
+    아래 정보는 공공데이터를 기반으로 하며, 최신 현황은 관할 기관에서 직접 확인하시기 바랍니다.
+  </p>
+  <div class="updated">✅ 공공데이터 기반 — 2026년 반영</div>
+
+  <h2>📂 데이터 출처</h2>
+  <div class="source-grid">
+    <div class="source-card">
+      <div class="icon">🏛</div>
+      <div class="name">기후에너지환경부</div>
+      <div class="type">낚시금지구역 고시 (해양·내수면)</div>
+      <a href="https://mcee.go.kr/home/web/main.do" target="_blank">mcee.go.kr ↗</a>
+    </div>
+    <div class="source-card">
+      <div class="icon">📊</div>
+      <div class="name">공공데이터포털</div>
+      <div class="type">낚시금지구역 GIS 공간정보</div>
+      <a href="https://www.data.go.kr/data/15130115/fileData.do" target="_blank">data.go.kr ↗</a>
+    </div>
+    <div class="source-card">
+      <div class="icon">🗺</div>
+      <div class="name">경기도 공공데이터</div>
+      <div class="type">경기도 낚시금지 및 제한구역</div>
+      <a href="https://data.gg.go.kr/portal/data/service/selectServicePage.do?infId=S4AMKUVUAEN1ZB341AUV32174529&infSeq=2" target="_blank">data.gg.go.kr ↗</a>
+    </div>
+    <div class="source-card">
+      <div class="icon">🐟</div>
+      <div class="name">한국낚시협회 (EKFA)</div>
+      <div class="type">낚시금지구역 고시 현황</div>
+      <a href="http://new.ekfa.kr/kfa_board_view.php?table_name=taskforcelive&no=4" target="_blank">ekfa.kr ↗</a>
+    </div>
+  </div>
+
+  <h2>⚖️ 법적 근거 및 관련 고시</h2>
+  <div class="law-box">
+    근거 법령: <strong>낚시 관리 및 육성법 제7조</strong><br>
+    낚시금지구역은 시장·군수·구청장이 지정하며 지자체별로 상이합니다.
+  </div>
+  <div class="link-list">
+    <a class="link-item" href="https://www.mcee.go.kr/home/web/policy_data/read.do?menuId=10263&seq=8474" target="_blank">
+      <div class="li-icon">📄</div>
+      <div class="li-text">
+        <div class="li-title">기후에너지환경부 — 낚시금지구역 고시</div>
+        <div class="li-url">mcee.go.kr/home/web/policy_data/read.do</div>
+      </div>
+      <div class="li-arrow">↗</div>
+    </a>
+    <a class="link-item" href="http://new.ekfa.kr/kfa_board_view.php?table_name=taskforcelive&no=4&pg=1" target="_blank">
+      <div class="li-icon">📄</div>
+      <div class="li-text">
+        <div class="li-title">한국낚시협회 — 고시 현황 (해양)</div>
+        <div class="li-url">new.ekfa.kr (no=4)</div>
+      </div>
+      <div class="li-arrow">↗</div>
+    </a>
+    <a class="link-item" href="http://new.ekfa.kr/kfa_board_view.php?table_name=taskforcelive&no=3&pg=1" target="_blank">
+      <div class="li-icon">📄</div>
+      <div class="li-text">
+        <div class="li-title">한국낚시협회 — 고시 현황 (내수면)</div>
+        <div class="li-url">new.ekfa.kr (no=3)</div>
+      </div>
+      <div class="li-arrow">↗</div>
+    </a>
+    <a class="link-item" href="http://new.ekfa.kr/kfa_board_view.php?table_name=taskforcelive&no=2&pg=1" target="_blank">
+      <div class="li-icon">📄</div>
+      <div class="li-text">
+        <div class="li-title">한국낚시협회 — 고시 현황 (저수지)</div>
+        <div class="li-url">new.ekfa.kr (no=2)</div>
+      </div>
+      <div class="li-arrow">↗</div>
+    </a>
+  </div>
+
+  <div class="disclaimer">
+    <h3>⚠️ 면책 조항</h3>
+    <p>
+      이지피싱 앱에서 제공하는 낚시금지구역 정보는 공공데이터를 기반으로 한 참고용 정보입니다. 데이터 갱신 시점 차이로 실제 규제와 다를 수 있으며, 법적 효력을 보장하지 않습니다.<br><br>
+      이지피싱은 민간 개발자가 운영하는 비공식 서비스이며, 대한민국 정부 또는 어떠한 정부 기관과도 제휴·후원·보증 관계에 있지 않습니다.<br><br>
+      정확한 낚시금지구역은 <strong>기후에너지환경부</strong> 또는 해당 <strong>지자체 관할 부서</strong>에서 반드시 직접 확인하시기 바랍니다.
+    </p>
+  </div>
+
+  <footer>
+    이지피싱 — 쉽고 안전한 낚시<br>
+    <a href="mailto:fishing.ai.lab@gmail.com">fishing.ai.lab@gmail.com</a> ·
+    <a href="/ef-legal/terms.html">이용약관</a> ·
+    <a href="/ef-legal/privacy.html">개인정보처리방침</a>
+  </footer>
+
+</div>
+</body>
+</html>
